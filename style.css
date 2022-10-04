@@ -13,20 +13,26 @@ body {
 }
 
 header {
-  height: 500px;
+  height: 100%;
+  width: 100%;
   background-color: #3400FF;
 }
-
 nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 20px;
-  margin-right: 40px;
-  color: #fff;
-  padding-top: 15px;
+  display:none;
 }
-.nav-item{
+@media (min-width: 1024px) {
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-right: 40px;
+    color: #fff;
+    padding-top: 15px;
+  }
+}
+
+.nav-item {
   cursor: pointer;
 }
 
@@ -45,6 +51,7 @@ nav {
   cursor: pointer;
 }
 
+
 .header-text {
   margin-left: 50px;
   margin-top: 70px;
@@ -57,15 +64,30 @@ nav {
   margin-bottom: 18px;
 }
 
-.header-image {
-  float: right;
+.headDesc{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
 }
+@media (min-width:1024px){
+  .headDesc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+
+
+
 
 .companies {
   display: flex;
   gap: 25px;
   margin: 15px 70px;
 }
+
 
 .company-items {
   text-decoration: none;
@@ -74,11 +96,20 @@ nav {
   font-size: 15px;
 }
 
+.api{
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+@media (min-width : 1024px ){
 .api {
   margin: 60px 10px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
 }
 
 .api-heading {
@@ -90,7 +121,9 @@ nav {
 .cards {
   display: flex;
   justify-content: space-evenly;
-  height: 250px;
+  
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card-active {
@@ -126,22 +159,25 @@ nav {
   margin: 0px 85px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .blog-card {
   display: flex;
+  flex-wrap: wrap;
   background-color: #fff;
   align-items: center;
   width: 600px;
   position: relative;
-  height: 288px;
+  /* height: 288px; */
   border-radius: 50px 10px 10px 15px;
 }
 
 .blog-content {
   display: flex;
   flex-direction: column;
-  margin-left: 67px;
+  padding-left: 10%;
   position: relative;
 }
 
@@ -181,6 +217,7 @@ nav {
 
 .faq-section {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 60px;
   justify-content: space-between;
   background-color: #E9EDFF;
@@ -219,12 +256,21 @@ nav {
   cursor: pointer;
   padding: 4px 4px;
 }
+.faq-image{
+  display: none;
+}
+@media (min-width: 1024px){
+  .faq-image{
+    display: block;
+  }
+}
 
 .download-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 100px 50px;
+  margin: 5%;
 }
 
 .download-section>.download-content>h1>span {
@@ -252,7 +298,7 @@ nav {
 .download-email>form {
   display: flex;
   justify-content: space-between;
-  gap: 400px;
+  gap: 20%;
 }
 
 .download-email>form>input {
@@ -274,12 +320,26 @@ nav {
   cursor: pointer;
 }
 
+.download-section{
+  display: none;
+}
+
+@media (min-width:1024px){
+  .download-section{
+    display: flex;
+  }
+}
+
 .footer-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #4718FD;
-  height: 250px;
+  /* height: 250px; */
+  margin-top: 5%;
+  padding: 5%;
 }
+
 
 .footer-left {
   display: flex;
@@ -292,6 +352,7 @@ nav {
 
 .list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   gap: 15px;
   color: #fff;
@@ -333,10 +394,14 @@ nav {
 
 
 .footer-right .logos-list .list-items:not(:last-child)::after {
-    content: "";
-    width: 1px;
-    height: 50%;
-    margin-left: 20px;
-    display: inline-block;
-    background-color: #ffffff;
+  content: "";
+  width: 1px;
+  height: 50%;
+  margin-left: 20px;
+  display: inline-block;
+  background-color: #ffffff;
+}
+
+.header-image{
+  width:100%;
 }
