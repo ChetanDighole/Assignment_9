@@ -186,18 +186,32 @@ nav {
   align-self: flex-end;
 }
 
+.blog-bottom{
+  display: none;
+}
+
+@media (min-width:1024px){
 .blog-bottom {
+  display: block;
   position: absolute;
   right: 35%;
   top: 86%;
 }
+}
 
+.blog-author{
+  display: none;
+}
+
+@media (min-width:1024px){
 .blog-author {
+  display: block;
   position: relative;
   right: 14%;
   font-weight: 600;
   font-size: 10px;
   bottom: 5px;
+}
 }
 
 
